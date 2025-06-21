@@ -43,7 +43,7 @@ Run the Jupyter Notebook `4251_Image_Processing_Assignment_01.ipynb` to see all 
 If the 2-level intensity reduction doesn't display properly, it's due to the implementation logic. The recommended fix is to use a direct thresholding approach for the binary (2-level) case:
 
 ```python
-def reduce_intensity_levels(image, levels):
+def intensity_levels(image, levels):
     if not (levels > 0 and (levels & (levels-1) == 0)):
         raise ValueError("Number of levels must be a positive power of 2")
     
